@@ -50,7 +50,7 @@ jobs:
         run: export version=$(git describe --abbrev=0 --tags) && sed -i "s/#VERSION#/$version/"  demo/components/version.js
 
       - name: build
-        run: npm run build:demo
+        run: npm run build:wasm
 
       - name: Deploy
         uses: garygrossgarten/github-action-scp@release
